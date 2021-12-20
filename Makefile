@@ -6,7 +6,7 @@
 #    By: vangirov <vangirov@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/02 14:14:45 by vangirov          #+#    #+#              #
-#    Updated: 2021/12/18 17:56:59 by vangirov         ###   ########.fr        #
+#    Updated: 2021/12/20 23:39:27 by vangirov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ bonus: $(BONUSOBJS)
 clean:
 	rm -f $(wildcard *.o)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
