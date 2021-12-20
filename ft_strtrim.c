@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 20:04:38 by vangirov          #+#    #+#             */
-/*   Updated: 2021/12/12 21:45:21 by vangirov         ###   ########.fr       */
+/*   Updated: 2021/12/20 23:37:47 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (new_str == NULL)
 		return (NULL);
 	new_str[len] = '\0';
-	while (len-- >= 0)
+	while (len-- > 0)
 		new_str[len] = s1[len];
 	return (new_str);
 }

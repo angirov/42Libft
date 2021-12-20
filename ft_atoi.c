@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 18:47:23 by vangirov          #+#    #+#             */
-/*   Updated: 2021/12/20 22:19:02 by vangirov         ###   ########.fr       */
+/*   Updated: 2021/12/20 23:07:56 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int	ft_atoi(const char *nptr)
 	{
 		minus = 1;
 		nptr++;
-		if (!ft_isdigit(*(nptr + 10)) && !ft_strncmp(nptr, "2147483648", 10))
-			return (-2147483648);
+		// if (!ft_isdigit(*(nptr + 10)) && !ft_strncmp(nptr, "2147483648", 10))
+		// 	return (-2147483648);
 	}
 	while (ft_isdigit(*nptr))
 		num = num * 10 + ft_digittonum(*nptr++);
