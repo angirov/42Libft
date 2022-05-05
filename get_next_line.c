@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 22:14:42 by vangirov          #+#    #+#             */
-/*   Updated: 2022/05/05 21:37:37 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/05/05 22:45:17 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	*ft_get_tail(char *line, char *buff)
 	return (line);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, char **to_fill)
 {
 	static char	buff[BUFFER_SIZE + 1];
 	char		*line;
@@ -81,6 +81,7 @@ char	*get_next_line(int fd)
 		}
 	}
 	line = ft_get_tail(line, buff);
+	*to_fill = line;
 	return (line);
 }
 

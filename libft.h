@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 12:00:17 by vangirov          #+#    #+#             */
-/*   Updated: 2022/05/05 21:00:55 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/05/05 22:45:37 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-char	*get_next_line(int fd);
+char	*get_next_line(int fd, char **to_fill);
 
 #endif
