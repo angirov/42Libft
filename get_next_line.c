@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 22:14:42 by vangirov          #+#    #+#             */
-/*   Updated: 2022/05/05 22:45:17 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/05/07 13:45:47 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "libft.h"
 
 #ifndef BUFFER_SIZE
-# define BUFFER_SIZE 42
+# define BUFFER_SIZE 1
 #endif
 
 static int	ft_read(int fd, char *buff, int size)

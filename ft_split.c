@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vangirov <vangirov@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:48:39 by vangirov          #+#    #+#             */
-/*   Updated: 2021/12/12 20:41:44 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/05/07 12:46:37 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int	ft_toklen(const char *s, char c)
 	return (toklen);
 }
 
-static char	*ft_allstr(const char *s, int toklen)
+static char	*ft_allocstr(const char *s, int toklen)
 {
 	char	*newstr;
 	char	*ptr;
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		if (*s != c)
 		{
 			toklen = ft_toklen(s, c);
-			arr[i++] = ft_allstr(s, toklen);
+			arr[i++] = ft_allocstr(s, toklen);
 			s += toklen;
 		}
 		else
