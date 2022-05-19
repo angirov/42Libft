@@ -6,13 +6,13 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:48:39 by vangirov          #+#    #+#             */
-/*   Updated: 2022/05/07 12:46:37 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/05/19 11:26:47 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_toknum(const char *str, char c)
+int	ft_toknum(const char *str, char c)
 {
 	int	num;
 	int	intoken;
