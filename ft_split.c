@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:48:39 by vangirov          #+#    #+#             */
-/*   Updated: 2022/06/08 13:12:12 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/06/08 13:18:31 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,32 @@ char	**ft_split_nullterm(char *string)
 	free(arr[wc]);
 	arr[wc] = NULL;
 	return (arr);
+}
+
+void	ft_free_split_nullterm(char **arr)
+{
+	int i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+}
+
+void	ft_free_split(char **arr, int n)
+{
+	int i;
+
+	i = 0;
+	while (i++ < n)
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
 }
 
 // #include <stdio.h>
