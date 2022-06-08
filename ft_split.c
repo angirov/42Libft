@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:48:39 by vangirov          #+#    #+#             */
-/*   Updated: 2022/05/19 11:26:47 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/06/08 13:12:12 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,21 @@ char	**ft_split(char const *s, char c)
 			s++;
 	}
 	arr[i] = 0;
+	return (arr);
+}
+
+char	**ft_split_nullterm(char *string)
+{
+	int		wc;
+	char	*newstring;
+	char	**arr;
+
+	wc = ft_toknum(string, ' ');
+	newstring = ft_strjoin(string, " NULL");
+	arr = ft_split(newstring, ' ');
+	free(newstring);
+	free(arr[wc]);
+	arr[wc] = NULL;
 	return (arr);
 }
 
