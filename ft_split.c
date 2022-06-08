@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: vangirov <vangirov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:48:39 by vangirov          #+#    #+#             */
-/*   Updated: 2022/06/08 16:53:47 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/06/08 21:18:26 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ char	**ft_split(char const *s, char c)
 
 void	ft_free_split(char **arr)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (arr[i])
