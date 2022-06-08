@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 12:00:17 by vangirov          #+#    #+#             */
-/*   Updated: 2022/06/08 13:19:06 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/06/08 16:54:05 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
-char	**ft_split_nullterm(char *string);
-void	ft_free_split_nullterm(char **arr);
 void	ft_free_split(char **arr, int n);
 int		ft_toknum(const char *str, char c);
 char	*ft_itoa(int n);

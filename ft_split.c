@@ -6,7 +6,7 @@
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 16:48:39 by vangirov          #+#    #+#             */
-/*   Updated: 2022/06/08 13:18:31 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/06/08 16:53:47 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,44 +86,16 @@ char	**ft_split(char const *s, char c)
 		else
 			s++;
 	}
-	arr[i] = 0;
+	arr[i] = NULL;
 	return (arr);
 }
 
-char	**ft_split_nullterm(char *string)
-{
-	int		wc;
-	char	*newstring;
-	char	**arr;
-
-	wc = ft_toknum(string, ' ');
-	newstring = ft_strjoin(string, " NULL");
-	arr = ft_split(newstring, ' ');
-	free(newstring);
-	free(arr[wc]);
-	arr[wc] = NULL;
-	return (arr);
-}
-
-void	ft_free_split_nullterm(char **arr)
+void	ft_free_split(char **arr)
 {
 	int i;
 
 	i = 0;
 	while (arr[i])
-	{
-		free(arr[i]);
-		i++;
-	}
-	free(arr);
-}
-
-void	ft_free_split(char **arr, int n)
-{
-	int i;
-
-	i = 0;
-	while (i++ < n)
 	{
 		free(arr[i]);
 		i++;
