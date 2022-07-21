@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vangirov <vangirov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 18:47:23 by vangirov          #+#    #+#             */
-/*   Updated: 2022/06/03 18:12:52 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/07/21 19:32:44 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,29 @@ int	ft_atoi(const char *nptr)
 	}
 	while (ft_isdigit(*nptr))
 		num = num * 10 + ft_digittonum(*nptr++);
+	if (minus)
+		num *= -1;
+	return (num);
+}
+
+long	ft_atol(const char *nptr)
+{
+	long	num;
+	int		minus;
+
+	num = 0;
+	minus = 0;
+	while (ft_isspace(*nptr))
+		nptr++;
+	if (*nptr == '+')
+		nptr++;
+	else if (*nptr == '-')
+	{
+		minus = 1;
+		nptr++;
+	}
+	while (ft_isdigit(*nptr))
+		num = num * 10 + (*nptr++ - '0');
 	if (minus)
 		num *= -1;
 	return (num);
