@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_tofill.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vangirov <vangirov@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 22:14:42 by vangirov          #+#    #+#             */
-/*   Updated: 2022/09/14 21:18:16 by vangirov         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:17:58 by vangirov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	*ft_get_tail(char *line, char *buff)
 	return (line);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line_tofill(int fd, char **to_fill)
 {
 	static char	buff[BUFFER_SIZE + 1];
 	char		*line;
@@ -81,6 +81,7 @@ char	*get_next_line(int fd)
 		}
 	}
 	line = ft_get_tail(line, buff);
+	*to_fill = line;
 	return (line);
 }
 
